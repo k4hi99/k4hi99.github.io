@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brew the Perfect Cold Brew at Home – The Cold Brew Crew</title>
+<meta name="description" content="A free 15-minute mini-course: make cold brew at home with under €20 of extra gear.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --espresso: #2B231D;
+    --sage: #3A5A40;
+    --terracotta: #E87A5D;
+    --gold: #D4A373;
+    --line: #E6DDD0;
+    --display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --body: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--espresso); font: 400 1.0625rem/1.65 var(--body); }
+  img, video { max-width: 100%; display: block; border-radius: 6px; }
+  a { color: var(--sage); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible, video:focus-visible { outline: 3px solid var(--sage); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); line-height: 1.15; margin: 0 0 .5em; }
+  h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); letter-spacing: -0.02em; }
+  h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); color: var(--sage); }
+  h3 { font-size: 1.2rem; margin-top: 1.6em; }
+  p, ul, ol { max-width: 68ch; }
+  .wrap { width: min(1100px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* Header */
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
+  .brand { font-family: var(--display); font-weight: 700; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3rem; align-items: center; padding: 4rem 0 2.5rem; }
+  .hero p.lead { font-size: 1.2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.6rem; }
+  .btn { display: inline-block; padding: .8rem 1.3rem; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid var(--espresso); color: var(--espresso); }
+  .btn.primary { background: var(--terracotta); border-color: var(--terracotta); }
+  .btn:hover { background: var(--espresso); color: var(--cream); border-color: var(--espresso); }
+  .ai-note { border-left: 4px solid var(--sage); background: #fff; padding: 1rem 1.2rem; margin: 0 0 3rem; font-size: .95rem; max-width: none; }
+  .ai-note strong { color: var(--sage); }
+
+  /* The recipe: the one bold element */
+  .recipe { background: var(--sage); color: var(--cream); border-radius: 10px; padding: 2.2rem; margin-bottom: 4.5rem; }
+  .recipe h2 { color: var(--cream); font-size: 1.3rem; margin-bottom: 1.4rem; }
+  .recipe ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; max-width: none; counter-reset: s; }
+  .recipe li { counter-increment: s; border-top: 3px solid var(--gold); padding-top: .9rem; }
+  .recipe .big { display: block; font-family: var(--display); font-weight: 700; font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1; margin-bottom: .4rem; }
+  .recipe .what::before { content: counter(s) ". "; }
+
+  /* Modules */
+  .module { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  .module.full { grid-template-columns: 1fr; }
+  .meta { color: var(--sage); font-weight: 700; margin-bottom: .2rem; }
+  .objective { font-style: italic; }
+  table { border-collapse: collapse; width: 100%; max-width: 68ch; margin: 1rem 0; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--display); border-bottom: 2px solid var(--espresso); }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding-left: 1.8rem; position: relative; margin-bottom: .35rem; }
+  .checklist li::before { content: ""; position: absolute; left: 0; top: .3em; width: 1rem; height: 1rem; border: 2px solid var(--sage); border-radius: 3px; }
+  figure { margin: 0; }
+  figcaption { font-size: .85rem; margin-top: .5rem; }
+  .video-box { max-width: 860px; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+  /* Quiz + footer */
+  .quiz iframe { width: 100%; border: 0; min-height: 1300px; }
+  footer { background: var(--espresso); color: var(--cream); padding: 3rem 0; margin-top: 4rem; font-size: .95rem; }
+  footer a { color: var(--gold); }
+  footer h2 { color: var(--cream); font-size: 1.4rem; }
+  footer table { color: var(--cream); }
+  footer th { border-bottom-color: var(--gold); }
+  footer td, footer th { border-bottom-color: rgba(250,247,242,.2); }
+
+  @media (max-width: 800px) {
+    .hero, .module, .two { grid-template-columns: 1fr; gap: 1.8rem; }
+    .recipe ol { grid-template-columns: 1fr 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <span class="brand">The Cold Brew Crew</span>
+    <a href="assets/docs/Brew-the-Perfect-Cold-Brew-at-Home.pdf" download>Download the handout (PDF)</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Brew the Perfect Cold Brew at Home</h1>
+      <p class="lead">A free 15-minute mini-course for iced-coffee lovers on a small budget. Three short modules, a jar, a sieve and under €20 of extra gear.</p>
+      <div class="actions">
+        <a class="btn primary" href="#module-1">Start Module 1</a>
+        <a class="btn" href="assets/docs/Brew-the-Perfect-Cold-Brew-at-Home.pdf" download>Download the handout</a>
+      </div>
+    </div>
+    <img src="assets/images/E3_M3_img_iced-latte_v1_gemini.jpeg" alt="Milk poured into a tall glass of iced cold brew, next to a sealed glass jar of concentrate with a blank kraft label." width="1200" height="900">
+  </section>
+
+  <p class="ai-note"><strong>Made with AI.</strong> This course was made with the help of AI tools. The presenter is a fictional person generated by AI: he does not exist and his voice is synthetic. All clips, images and music are AI-generated. Every factual claim was checked against sources by a human before publication.</p>
+
+  <section class="recipe" aria-labelledby="recipe-title">
+    <h2 id="recipe-title">The whole recipe, in four steps</h2>
+    <ol>
+      <li><span class="big">1:4</span><span class="what">Coffee to water, by weight</span></li>
+      <li><span class="big">12–16 h</span><span class="what">Steep on the counter (18–24 h in the fridge)</span></li>
+      <li><span class="big">×2</span><span class="what">Filter: sieve, then paper or cloth</span></li>
+      <li><span class="big">1:1</span><span class="what">Dilute with water or milk</span></li>
+    </ol>
+  </section>
+
+  <!-- Module 1 -->
+  <section class="module" id="module-1">
+    <div>
+      <p class="meta">Module 1 · about 5 minutes</p>
+      <h2>Gear, Beans &amp; Ratios on a Budget</h2>
+      <p class="objective">Identify the gear you need, the right grind size and a baseline coffee-to-water ratio.</p>
+      <h3>Minimal gear (under €20 extra)</h3>
+      <p>You probably own most of this already. Even if you buy everything, it stays under €20.</p>
+      <ul>
+        <li>A large glass jar (1–2 L) or a pitcher</li>
+        <li>A fine-mesh sieve</li>
+        <li>Paper coffee filters or a clean cotton cloth</li>
+        <li>A basic kitchen scale</li>
+        <li>Optional: a French press can replace the jar and the sieve</li>
+      </ul>
+      <h3>Choose and grind your beans</h3>
+      <ul>
+        <li><strong>Grind:</strong> extra-coarse, like coarse sea salt. Fine grounds over-extract and give a muddy, bitter cold brew.</li>
+        <li><strong>Pre-ground coffee:</strong> choose one labelled for French press or coarse brewing.</li>
+        <li><strong>Roast:</strong> many people like medium to dark roasts for cold brew; light roasts taste brighter and fruitier. Try what you like.</li>
+      </ul>
+      <h3>The baseline ratio: 1:4</h3>
+      <p>Cold brew is made as a concentrate that you dilute later (Module 3). Use 1 part coffee to 4 parts water, by weight: for example, 100 g of coarse coffee and 400 g (400 ml) of water. Weigh, don’t scoop: a cup of coffee grounds weighs more or less depending on the grind.</p>
+    </div>
+    <figure>
+      <img src="assets/images/E3_M1_img_grind-comparison_v2_gemini.jpeg" alt="Two small piles of ground coffee on a wooden counter: a fine powder on the left, a coarse grind like sea salt on the right." width="1200" height="900" loading="lazy">
+      <figcaption>Left: too fine. Right: the extra-coarse grind you want.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Module 2 -->
+  <section class="module full" id="module-2">
+    <div>
+      <p class="meta">Module 2 · about 5 minutes</p>
+      <h2>Steeping &amp; Filtration</h2>
+      <p class="objective">Select the right steeping time and filtering method for a batch.</p>
+      <div class="video-box">
+        <video controls preload="metadata" poster="assets/images/E3_M2_img_presenter_v2_gemini.jpeg" width="1280" height="720">
+          <source src="assets/video/E3_M2_lesson-video_v2.mp4" type="video/mp4">
+          Your browser cannot play this video. <a href="assets/video/E3_M2_lesson-video_v2.mp4">Download it (MP4)</a>.
+        </video>
+        <p><small>Lesson video, 1 min 44, with subtitles. The presenter, clips and music are AI-generated.</small></p>
+      </div>
+    </div>
+    <div class="two">
+      <div>
+        <h3>Combine and steep</h3>
+        <ol>
+          <li>Put the coarse grounds in the jar and pour the water over them.</li>
+          <li>Stir gently until all the grounds are wet.</li>
+          <li>Cover the jar with a lid or a small plate.</li>
+          <li>Steep: <strong>12–16 hours at room temperature</strong>, or <strong>18–24 hours in the fridge</strong>. Never more than 24 hours.</li>
+        </ol>
+        <p>Why the difference? Cold slows extraction, so fridge brewing takes longer.</p>
+        <h3>Filter twice</h3>
+        <ol>
+          <li><strong>First pass:</strong> pour through the fine-mesh sieve to catch the big grounds.</li>
+          <li><strong>Second pass:</strong> line the sieve with a paper filter or a clean cloth and pour again, slowly.</li>
+        </ol>
+        <p>Tip: let it drain on its own rather than squeezing the cloth, which can push fine particles into your coffee.</p>
+      </div>
+      <figure>
+        <img src="assets/images/E3_M2_img_steep-filter_v2_gemini.jpeg" alt="A covered glass jar of steeping coffee next to a sieve lined with a paper filter, dripping into a glass pitcher." width="1200" height="900" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Module 3 -->
+  <section class="module" id="module-3">
+    <div>
+      <p class="meta">Module 3 · about 5 minutes</p>
+      <h2>Diluting, Storing &amp; Troubleshooting</h2>
+      <p class="objective">Brew a first batch of ready-to-drink cold brew using the course’s ratio, dilution and storage guidelines.</p>
+      <h3>Dilute</h3>
+      <ol>
+        <li>Pour some concentrate into a glass with ice.</li>
+        <li>Add the same amount of water or milk (1:1).</li>
+        <li>Taste. Too strong? Go up to 1:2.</li>
+      </ol>
+      <h3>Store</h3>
+      <ul>
+        <li><strong>Concentrate:</strong> in a sealed glass jar in the fridge. Best within a week, up to 2 weeks.</li>
+        <li><strong>Diluted cold brew:</strong> drink it within 2–3 days.</li>
+        <li>Write the brew date on the jar.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Fix your next batch</h3>
+      <table>
+        <thead><tr><th scope="col">Your cold brew is…</th><th scope="col">Try this next time</th></tr></thead>
+        <tbody>
+          <tr><td>Too bitter</td><td>A coarser grind or a shorter steep</td></tr>
+          <tr><td>Too weak</td><td>More coffee or a longer steep</td></tr>
+          <tr><td>Sour</td><td>A longer steep</td></tr>
+          <tr><td>Flat, stale</td><td>A fully sealed jar with little air inside</td></tr>
+        </tbody>
+      </table>
+      <h3>Self-check: my first batch</h3>
+      <ul class="checklist">
+        <li>I used a 1:4 ratio, weighed on a scale</li>
+        <li>I noted the steep time and where it steeped (counter or fridge)</li>
+        <li>I filtered twice</li>
+        <li>I diluted 1:1 and adjusted to taste</li>
+        <li>My verdict: too bitter / too weak / sour / just right</li>
+        <li>The brew date is on the jar</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section class="module full quiz" id="quiz">
+    <div>
+      <h2>Check what you learned</h2>
+      <p>Six questions, no sign-up, your score and the answers at the end. <a href="https://tally.so/r/Yj51W5">Open the quiz in a new tab</a> if it doesn’t load below.</p>
+      <iframe src="https://tally.so/embed/Yj51W5?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1" title="Cold brew quiz" loading="lazy"></iframe>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <h2>Credits</h2>
+    <p>Course designed by Mayline (The Cold Brew Crew) for ÉSTIAM, October 2026. Free portfolio project: nothing is sold and no personal data is collected on this page.</p>
+    <table>
+      <thead><tr><th scope="col">AI tool</th><th scope="col">What it made</th></tr></thead>
+      <tbody>
+        <tr><td>Google Gemini</td><td>Text drafts and images</td></tr>
+        <tr><td>Google Flow</td><td>Video clips</td></tr>
+        <tr><td>Vidnoz</td><td>The presenter’s avatar video (free plan, watermark kept)</td></tr>
+        <tr><td>MusicGen</td><td>Background music (non-commercial use)</td></tr>
+        <tr><td>Claude</td><td>Reviews, fact-check research, process documents, this page</td></tr>
+      </tbody>
+    </table>
+    <p>Handout made with Gamma, quiz with Tally, video edited in Kdenlive. Fonts: Space Grotesk and Plus Jakarta Sans (Open Font License). <a href="assets/docs/E3_Credits.pdf">Full credits and sources (PDF)</a>.</p>
+  </div>
+</footer>
+
+</body>
+</html>
